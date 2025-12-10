@@ -6,10 +6,6 @@ function App() {
 
   return (
     <>
-      terterojjtnerkj
-
-
-
 
     </>
   )
