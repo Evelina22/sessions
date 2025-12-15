@@ -1,24 +1,138 @@
-
-
-header {
-  width: 100%;
- 
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
 }
 
-ul {
-  width: 100%;
-  list-style: none;
-  padding: 0;
+body {
+  background: #f7f7f7;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  padding: 20px;
 }
 
-nav {
+.board {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 14px;
+  width: 540px;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.column-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.count {
+  color: #888;
+  font-weight: 500;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.gray { background: #bbb; }
+.dot.blue { background: #2f80ed; }
+.dot.green { background: #27ae60; }
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.card h4 {
+  margin: 8px 0 6px;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #555;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.urgent {
+  background: #fde2e2;
+  color: #c0392b;
+}
+
+.medium {
+  background: #fff3cd;
+  color: #b9770e;
+}
+
+.low {
+  background: #e8f5e9;
+  color: #1e8449;
+}
+
+.meta {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-   padding: 30px;
-  width: 100%;
+  font-size: 12px;
+  color: #777;
+  margin-top: 8px;
+}
+
+.meta-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* margin-bottom: 10px; */
+}
+
+.avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.tag.blue { background: #e3f2fd; color: #1565c0; }
+.tag.purple { background: #f3e5f5; color: #6a1b9a; }
+.tag.green { background: #e8f5e9; color: #2e7d32; }
+.tag.yellow { background: #fff9c4; color: #9e7d00; }
+.tag.gray { background: #eeeeee; color: #555; }
+
+.comment {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+  color: #444;
+  margin-top: 10px;
 }
