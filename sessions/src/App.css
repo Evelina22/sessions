@@ -136,3 +136,14 @@ body {
   color: #444;
   margin-top: 10px;
 }
+.todo-menu {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+}
+
+.todo-menu:hover {
+  color: #333;
+}
