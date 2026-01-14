@@ -1,9 +1,14 @@
-
 import "./App.css";
 import avatar1 from './assets/avatar1.jpg'
 import avatar2 from './assets/avatar2.jpg'
 import avatar3 from './assets/avatar3.jpg'
 import avatar4 from './assets/avatar4.jpg'
+import { HiOutlineDotsVertical } from "react-icons/hi";
+
+<button className="todo-menu">
+  <HiOutlineDotsVertical />
+</button>
+
 
 export default function App() {
   return (
@@ -12,6 +17,9 @@ export default function App() {
         <div className="column-header">
           <span className="dot gray"></span>
           <h3>To Do <span className="count">4</span></h3>
+          <button className="todo-menu" aria-label="Menu">
+    &#8943;
+  </button>
         </div>
 
         <div className="card">
@@ -52,6 +60,9 @@ export default function App() {
         <div className="column-header">
           <span className="dot blue"></span>
           <h3>In Progress <span className="count">3</span></h3>
+          <button className="todo-menu" aria-label="Menu">
+    &#8943;
+  </button>
         </div>
 
         <div className="card">
@@ -80,6 +91,9 @@ export default function App() {
         <div className="column-header">
           <span className="dot green"></span>
           <h3>Done <span className="count">2</span></h3>
+          <button className="todo-menu" aria-label="Menu">
+    &#8943;
+  </button>
         </div>
 
         <div className="card">
