@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 240 20% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 240 15% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 15% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 60%;
+    --primary-foreground: 240 20% 4%;
+
+    --secondary: 240 10% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 10% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 280 100% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 15%;
+    --ring: 210 100% 60%;
+
+    --radius: 0.75rem;
+
+    /* Emotion colors - neon HSL */
+    --emotion-calm: 210 80% 55%;
+    --emotion-joy: 142 70% 55%;
+    --emotion-energy: 45 95% 55%;
+    --emotion-stress: 0 85% 60%;
+    --emotion-sadness: 280 75% 60%;
+    
+    /* Glow effects */
+    --glow-calm: 210 80% 55%;
+    --glow-joy: 142 70% 55%;
+    --glow-energy: 45 95% 55%;
+    --glow-stress: 0 85% 60%;
+    --glow-sadness: 280 75% 60%;
+
+    /* Planet colors */
+    --planet-inactive: 240 10% 25%;
+    --planet-hover: 240 10% 35%;
+
+    /* Space background */
+    --space-deep: 240 30% 3%;
+    --space-nebula: 260 50% 8%;
+    --star-color: 45 100% 95%;
+  }
+
+  /* Light theme */
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 210 80% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 92%;
+    --secondary-foreground: 240 10% 15%;
+
+    --muted: 240 5% 90%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 280 60% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 85%;
+    --input: 240 5% 92%;
+    --ring: 210 80% 50%;
+
+    /* Emotion colors - pastel HSL */
+    --emotion-calm: 160 60% 75%;
+    --emotion-joy: 320 70% 80%;
+    --emotion-energy: 45 80% 75%;
+    --emotion-stress: 0 60% 75%;
+    --emotion-sadness: 270 50% 78%;
+    
+    /* Glow effects - softer for light theme */
+    --glow-calm: 160 60% 75%;
+    --glow-joy: 320 70% 80%;
+    --glow-energy: 45 80% 75%;
+    --glow-stress: 0 60% 75%;
+    --glow-sadness: 270 50% 78%;
+
+    /* Planet colors */
+    --planet-inactive: 240 5% 80%;
+    --planet-hover: 240 5% 70%;
+
+    /* Space background - light version */
+    --space-deep: 220 30% 95%;
+    --space-nebula: 260 30% 92%;
+    --star-color: 45 30% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Orbitron', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glow-calm {
+    box-shadow: 0 0 20px hsl(var(--emotion-calm) / 0.6),
+                0 0 40px hsl(var(--emotion-calm) / 0.3),
+                inset 0 0 15px hsl(var(--emotion-calm) / 0.2);
+  }
+
+  .glow-joy {
+    box-shadow: 0 0 20px hsl(var(--emotion-joy) / 0.6),
+                0 0 40px hsl(var(--emotion-joy) / 0.3),
+                inset 0 0 15px hsl(var(--emotion-joy) / 0.2);
+  }
+
+  .glow-energy {
+    box-shadow: 0 0 20px hsl(var(--emotion-energy) / 0.6),
+                0 0 40px hsl(var(--emotion-energy) / 0.3),
+                inset 0 0 15px hsl(var(--emotion-energy) / 0.2);
+  }
+
+  .glow-stress {
+    box-shadow: 0 0 20px hsl(var(--emotion-stress) / 0.6),
+                0 0 40px hsl(var(--emotion-stress) / 0.3),
+                inset 0 0 15px hsl(var(--emotion-stress) / 0.2);
+  }
+
+  .glow-sadness {
+    box-shadow: 0 0 20px hsl(var(--emotion-sadness) / 0.6),
+                0 0 40px hsl(var(--emotion-sadness) / 0.3),
+                inset 0 0 15px hsl(var(--emotion-sadness) / 0.2);
+  }
+
+  .glass {
+    background: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.3); }
+}
+
+@keyframes orbit-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
