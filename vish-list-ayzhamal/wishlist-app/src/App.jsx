@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
+<h1>Мой Виш-лист ТЕСТ</h1>
 function App() {
   const [wishlist, setWishlist] = useState([]);
   const [name, setName] = useState('');
