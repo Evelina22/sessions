@@ -1,0 +1,56 @@
+/* Новая зеленая палитра */
+:root {
+  --primary-green: #7ebc89;    /* Основной травянистый */
+  --soft-green: #c1dfc4;       /* Нежный пастельный */
+  --bg-light-green: #f0f7f1;   /* Почти белый с оттенком мяты */
+  --text-dark: #2d3a30;        /* Темно-хвойный для текста */
+  --accent-olive: #a3b18a;     /* Оливковый для акцентов */
+}
+
+body {
+  background-color: var(--bg-light-green);
+  color: var(--text-dark);
+}
+
+.container {
+  /* Меняем цвет тени на зеленоватый */
+  box-shadow: 0 10px 25px rgba(126, 188, 137, 0.2);
+}
+
+h1 {
+  color: var(--primary-green);
+}
+
+/* Поля ввода */
+input {
+  border: 2px solid var(--soft-green);
+}
+
+input:focus {
+  border-color: var(--primary-green);
+}
+
+/* Главная кнопка */
+button[type="submit"] {
+  background-color: var(--primary-green);
+}
+
+button[type="submit"]:hover {
+  background-color: #6a9f74; /* Чуть темнее при наведении */
+}
+
+/* Кнопка выбора файла */
+.file-label {
+  color: var(--primary-green);
+  border: 2px dashed var(--soft-green);
+}
+
+.file-label:hover {
+  background-color: var(--soft-green);
+  border-color: var(--primary-green);
+}
+
+/* Карточки товаров */
+.wish-item {
+  border-left: 5px solid var(--primary-green);
+}

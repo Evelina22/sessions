@@ -1,0 +1,165 @@
+/* Основной фон и шрифт */
+:root {
+  --primary-pink: #ff85a1;
+  --soft-pink: #fbb1bd;
+  --bg-color: #fff5f6;
+  --text-dark: #4a4a4a;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 133, 161, 0.2);
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary-pink);
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Стили формы */
+.wish-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 12px 15px;
+  border: 2px solid var(--soft-pink);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: var(--primary-pink);
+}
+
+button[type="submit"] {
+  background-color: var(--primary-pink);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff6b8d;
+  transform: translateY(-2px);
+}
+
+/* Стили списка товаров */
+.wish-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wish-item {
+  background: #fff;
+  border-left: 5px solid var(--primary-pink);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  animation: fadeIn 0.5s ease;
+}
+
+.wish-item span {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.wish-item a {
+  display: inline-block;
+  margin-left: 10px;
+  color: #5dade2;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.wish-item a:hover {
+  text-decoration: underline;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.wish-item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="file"] {
+  border: none;
+  font-size: 0.8rem;
+  color: #888;
+}
+/* Прячем стандартную некрасивую кнопку */
+.hidden-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Стилизуем нашу новую кнопку-label */
+.file-label {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #fff;
+  color: var(--primary-pink);
+  border: 2px dashed var(--soft-pink);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.file-label:hover {
+  background-color: var(--bg-color);
+  border-color: var(--primary-pink);
+}
