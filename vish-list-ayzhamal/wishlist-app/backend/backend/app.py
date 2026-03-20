@@ -57,6 +57,20 @@ def add_item():
     
     return jsonify({"id": new_item.id, "name": name, "link": link, "image": f"http://localhost:5000/uploads/{filename}" if filename else None})
 
+# --- ДОБАВИТЬ ЭТОТ БЛОК ---
+@app.route('/items/<int:item_id>', methods=['DELETE'])
+def delete_item(item_id):
+    item = WishItem.query.get_or_404(item_id) # Найти товар по ID или выдать ошибку 404
+    try:
+        # Если есть картинка, можно было бы её удалить, но для простоты пропустим
+        db.session.delete(item)
+        db.session.commit()
+        return jsonify({'message': 'Item deleted successfully'}), 200
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'error': str(e)}), 500
+# --------------------------
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)

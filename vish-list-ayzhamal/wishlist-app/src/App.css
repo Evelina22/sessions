@@ -54,3 +54,32 @@ button[type="submit"]:hover {
 .wish-item {
   border-left: 5px solid var(--primary-green);
 }
+.wish-item {
+  position: relative; /* Обязательно для позиционирования кнопки */
+}
+
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый фон */
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #7ebc89; /* Твой зеленый цвет */
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.delete-btn:hover {
+  background: #ff4d4d;
+  color: white;
+  transform: scale(1.1);
+}
